@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEC50BF5-2D2C-4D9B-854B-D49EBBA1C075}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QACIglesia.Model</RootNamespace>
+    <AssemblyName>QACIglesia.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IOrganizacionPriorizadaRepositorio.cs" />
+    <Compile Include="IOrganizacionRepositorio.cs" />
+    <Compile Include="INucleoAuditRepositorio.cs" />
+    <Compile Include="PreHorario.cs" />
+    <Compile Include="Nucleo.cs" />
+    <Compile Include="PreNucleo.cs" />
+    <Compile Include="PreParticipante.cs" />
+    <Compile Include="EBF.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EBF.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="GEODB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GEODB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="IQACDBUtilidadRepositorio.cs" />
+    <Compile Include="INucleoQACRepositorio.cs" />
+    <Compile Include="IAlfabetizadorRepositorio.cs" />
+    <Compile Include="IHorarioRepositorio.cs" />
+    <Compile Include="IPreHorarioRepositorio.cs" />
+    <Compile Include="IPreNucleoRepositorio.cs" />
+    <Compile Include="IParticipanteOyenteRepositorio.cs" />
+    <Compile Include="IPreParticipanteRepositorio.cs" />
+    <Compile Include="IQACParticipantesRepositorio.cs" />
+    <Compile Include="IProvinciaQACRepositorio.cs" />
+    <Compile Include="ItmpEspacioAprendizajeRepositorio.cs" />
+    <Compile Include="INacionalidadRepositorio.cs" />
+    <Compile Include="IUsuarioRepositorio.cs" />
+    <Compile Include="ItmpParticipantesRepositorio.cs" />
+    <Compile Include="IParticipantesRepositorio.cs" />
+    <Compile Include="ICentroAprendizajeRepositorio.cs" />
+    <Compile Include="IRegionalRepositorio.cs" />
+    <Compile Include="IEducadoresRepositorio.cs" />
+    <Compile Include="IEspacioAprendizajeRepositorio.cs" />
+    <Compile Include="IHorariosEspacioRepositorio.cs" />
+    <Compile Include="Alfabetizador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="QAC.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QAC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoParticipante.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="EBF.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EBF.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EBF.dbml.layout">
+      <DependentUpon>EBF.dbml</DependentUpon>
+    </None>
+    <None Include="GEODB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GEODB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GEODB.dbml.layout">
+      <DependentUpon>GEODB.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QAC.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QAC.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QAC.dbml.layout">
+      <DependentUpon>QAC.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EBF.EA.Infrastructure\QACIglesia.Infrastructure.csproj">
+      <Project>{c6e3a337-b9ee-4f39-8408-5f207f0820b1}</Project>
+      <Name>QACIglesia.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

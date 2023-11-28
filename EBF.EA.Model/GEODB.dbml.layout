@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GEODB">
+  <DataContextMoniker Name="/GEODBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0a5a31d1-037d-4229-a436-d2bd1f91cec5" absoluteBounds="0.5, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/GEODBDataContext/Provincia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3ee5760-9245-4793-b7d3-95fbe4db88df" absoluteBounds="0.51500000000000012, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09c41138-7100-4e8a-850e-54b5e4202b8f" absoluteBounds="2.875, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/GEODBDataContext/Municipio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da664ef7-9fe8-4228-8d3d-15a04de2ced3" absoluteBounds="2.8899999999999997, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.38544840494792); (2.875 : 3.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEODBDataContext/Provincia/Provincia_Municipio" />
+      <nodes>
+        <classShapeMoniker Id="0a5a31d1-037d-4229-a436-d2bd1f91cec5" />
+        <classShapeMoniker Id="09c41138-7100-4e8a-850e-54b5e4202b8f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1cc4acb2-ef5f-489f-b301-820e4eaa48e1" absoluteBounds="5.25, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/GEODBDataContext/DistritoMunicipal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80c1b68c-a01a-49ae-92e0-089ae8142625" absoluteBounds="5.265, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 3.38544840494792); (5.25 : 3.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEODBDataContext/Municipio/Municipio_DistritoMunicipal" />
+      <nodes>
+        <classShapeMoniker Id="09c41138-7100-4e8a-850e-54b5e4202b8f" />
+        <classShapeMoniker Id="1cc4acb2-ef5f-489f-b301-820e4eaa48e1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d83fdaff-d5dc-44e7-bbe7-f8fa6c03e860" absoluteBounds="5.125, 5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/GEODBDataContext/Seccion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2bd29a6f-3d76-4eae-87d9-31f23e54ab86" absoluteBounds="5.1400000000000006, 5.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.1875 : 4.27089680989583); (6.1875 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEODBDataContext/DistritoMunicipal/DistritoMunicipal_Seccion" />
+      <nodes>
+        <classShapeMoniker Id="1cc4acb2-ef5f-489f-b301-820e4eaa48e1" />
+        <classShapeMoniker Id="d83fdaff-d5dc-44e7-bbe7-f8fa6c03e860" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9622329e-1f17-4aeb-afc4-4a73748dffb1" absoluteBounds="2.875, 5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GEODBDataContext/Barrio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e823495e-756f-41ad-8ada-a293e4700405" absoluteBounds="2.89, 5.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 5.98159912109375); (4.875 : 5.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEODBDataContext/Seccion/Seccion_Barrio" />
+      <nodes>
+        <classShapeMoniker Id="d83fdaff-d5dc-44e7-bbe7-f8fa6c03e860" />
+        <classShapeMoniker Id="9622329e-1f17-4aeb-afc4-4a73748dffb1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7856ca7a-5970-4fc6-bda3-b3baeb82280c" absoluteBounds="0.5, 5.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/GEODBDataContext/SubBarrio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f796cca4-6f36-4829-9eaa-7fdb0690657b" absoluteBounds="0.51500000000000012, 5.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 6.42390055338542); (2.5 : 6.42390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEODBDataContext/Barrio/Barrio_SubBarrio" />
+      <nodes>
+        <classShapeMoniker Id="9622329e-1f17-4aeb-afc4-4a73748dffb1" />
+        <classShapeMoniker Id="7856ca7a-5970-4fc6-bda3-b3baeb82280c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

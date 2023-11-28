@@ -1,0 +1,70 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QACIglesia.Model.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EBFPRODBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@</Value>
+    </Setting>
+    <Setting Name="QACPRODBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=jby2gzmv8m.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacuser;Password=contrato2013@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=jby2gzmv8m.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacuser;Password=contrato2013@</Value>
+    </Setting>
+    <Setting Name="EBFPRODBTMPConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODBTMP;Persist Security Info=True;User ID=qacusuario&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODBTMP;Persist Security Info=True;User ID=qacusuario</Value>
+    </Setting>
+    <Setting Name="GEODBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=GEODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=GEODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@</Value>
+    </Setting>
+    <Setting Name="EBFPRODBConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODB;Persist Security Info=True;User ID=qacusuario&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODB;Persist Security Info=True;User ID=qacusuario</Value>
+    </Setting>
+    <Setting Name="VoluntariadoDBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=VoluntariadoDB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=VoluntariadoDB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@</Value>
+    </Setting>
+    <Setting Name="QACPRODBConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacusuario;Password=digepep2016@</Value>
+    </Setting>
+    <Setting Name="QACPRODBConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=jby2gzmv8m.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacuser&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=jby2gzmv8m.database.windows.net;Initial Catalog=QACPRODB;Persist Security Info=True;User ID=qacuser</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

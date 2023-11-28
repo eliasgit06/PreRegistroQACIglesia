@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EBFPRODB" Class="DataClassesEBFDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=EBFPRODB;Persist Security Info=True;User ID=qacusuario" SettingsObjectName="QACIglesia.Model.Properties.Settings" SettingsPropertyName="EBFPRODBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CentroAprendizaje" Member="CentroAprendizajes">
+    <Type Name="CentroAprendizaje">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="RegionalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistritoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoCentro" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Provincia" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="DistritoMunicipal" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Seccion" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Barrio" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="NombreCentro" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="CedulaContacto" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="Contacto" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Educadores" Member="Educadores">
+    <Type Name="Educadores">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Codigo" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DocumentoIdentidad" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="EstadoCivil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="Ocupacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trabaja" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CodigoCentro" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PlanQAC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="DistritoId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="OrganizacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Centroid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CtaBanco" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="ExperienciaEducacionAdultos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtraExperiencia" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="TrabajoActual" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="CapacitadoPor" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="FechaCapacitado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LugarCapacitacion" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="CapacitadoMINERD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="PostGrado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PostGradoAreaEstudio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Profesional" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProfesionalAreaEstudio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estudiante" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EstudianteAreaEstudio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SistemaEducativo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CodigoDocente" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="LunesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sabadomanana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Domingotarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CedulaError" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EspaciosActivosPorEducador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EspacioAprendizaje" Member="EspacioAprendizajes">
+    <Type Name="EspacioAprendizaje">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CodigoProyecto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="NombreEspacio" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EducadorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DocumentoIdentidad" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="EstatusVerificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstatusCapacitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstatusEspacio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Obs" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="CartaRecibida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CartaRecibidaPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="CartaEntregadaPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaRecepcionCC" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Validado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitsEnviados" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitsEntregados" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitAlfabetizadorEntregado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Nota" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RegistradoPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaRecepcionKitAlfabetizador" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TitularEscuela" Type="System.String" DbType="Char(150)" CanBeNull="true" />
+      <Column Name="AnimadorAsignado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnimadorPropuesto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FechaRecepcionKit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrganizacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Centroid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModificadoPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaAlta" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AltaPor" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Fechacancelacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Canceladopor" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Motivocancelacion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HorariosEspacio" Member="HorariosEspacios">
+    <Type Name="HorariosEspacio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Dia" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Inicio" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Termino" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Lugar" Type="System.String" DbType="Char(250)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(250)" CanBeNull="true" />
+      <Column Name="EspacioId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Participantes" Member="Participantes">
+    <Type Name="Participantes">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Codigo" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DocumentoIdentidad" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstadoCivil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(512)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="Ocupacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trabaja" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Discapacidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiaClasePreferido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TandaPreferida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoCentro" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PlanQAC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActaNacimiento" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Nacionalidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DistritoId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="ActaEntregada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CedulaError" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtraDiscapacidad" Type="System.String" DbType="Char(250)" CanBeNull="true" />
+      <Column Name="OrganizacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SinDiscapacidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDVisual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDAuditiva" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDFisicaMotora" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDIntelectual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDTrastorno" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDOtra" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="centroid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Regional" Member="Regionals">
+    <Type Name="Regional">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigoregional" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Provincia" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Contacto" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Telefono2" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="Telefono3" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="Extenciones" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpEspacioAprendizaje" Member="tmpEspacioAprendizajes">
+    <Type Name="tmpEspacioAprendizaje">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CodigoProyecto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="NombreEspacio" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EducadorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DocumentoIdentidad" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="EstatusVerificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstatusCapacitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstatusEspacio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Obs" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="CartaRecibida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CartaRecibidaPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="CartaEntregadaPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaRecepcionCC" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Validado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitsEnviados" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitsEntregados" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KitAlfabetizadorEntregado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Nota" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RegistradoPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaRecepcionKitAlfabetizador" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TitularEscuela" Type="System.String" DbType="Char(150)" CanBeNull="true" />
+      <Column Name="AnimadorAsignado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnimadorPropuesto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FechaRecepcionKit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrganizacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Centroid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModificadoPor" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="FechaAlta" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AltaPor" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpParticipantes" Member="tmpParticipantes">
+    <Type Name="tmpParticipantes">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Codigo" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DocumentoIdentidad" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstadoCivil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(512)" CanBeNull="true" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MunicipioId" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="Ocupacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trabaja" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Discapacidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiaClasePreferido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TandaPreferida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoCentro" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PlanQAC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActaNacimiento" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Nacionalidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DistritoId" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="SeccionId" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BarrioId" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="ActaEntregada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CedulaError" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LunesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MiercolesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JuevesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViernesNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SabadoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoManana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoTarde" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DomingoNoche" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtraDiscapacidad" Type="System.String" DbType="Char(250)" CanBeNull="true" />
+      <Column Name="OrganizacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SinDiscapacidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDVisual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDAuditiva" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDFisicaMotora" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDIntelectual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDTrastorno" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DDOtra" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="centroid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntidadesAliadas" Member="EntidadesAliadas">
+    <Type Name="EntidadesAliada">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Contacto" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaginaWeb" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RNC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GestionaPago" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ocupaciones" Member="Ocupaciones">
+    <Type Name="Ocupaciones">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ocupacion" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nacionalidades" Member="Nacionalidades">
+    <Type Name="Nacionalidades">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Continente" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Pais" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AreasEstudio" Member="AreasEstudios">
+    <Type Name="AreasEstudio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

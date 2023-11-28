@@ -1,0 +1,16 @@
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Model.dll.config
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Model.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Model.pdb
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Infrastructure.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\MimeKit.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\MailKit.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\BouncyCastle.Crypto.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Infrastructure.pdb
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\QACIglesia.Infrastructure.dll.config
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\MimeKit.xml
+C:\PreRegistroQACIglesia\EBF.EA.Model\bin\Debug\MailKit.xml
+C:\PreRegistroQACIglesia\EBF.EA.Model\obj\Debug\QACIglesia.Model.csproj.AssemblyReference.cache
+C:\PreRegistroQACIglesia\EBF.EA.Model\obj\Debug\QACIglesia.Model.csproj.CoreCompileInputs.cache
+C:\PreRegistroQACIglesia\EBF.EA.Model\obj\Debug\QACIglesia.Model.csproj.CopyComplete
+C:\PreRegistroQACIglesia\EBF.EA.Model\obj\Debug\QACIglesia.Model.dll
+C:\PreRegistroQACIglesia\EBF.EA.Model\obj\Debug\QACIglesia.Model.pdb

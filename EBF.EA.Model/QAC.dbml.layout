@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.875, 24.75" name="QAC">
+  <DataContextMoniker Name="/QACDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c4d1eb70-9da9-477a-abb2-76b2e2fd2caf" absoluteBounds="12.5, 0.75, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/QACDataContext/Alfabetizador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73d48d96-3781-4e97-834f-725fc5e60678" absoluteBounds="12.515, 1.2100000000000009, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f438b1c-1635-44c2-928d-910f7dd32d83" absoluteBounds="14.625, 0.75, 2, 4.8477197265625">
+      <DataClassMoniker Name="/QACDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14f69ab8-bfe7-466e-8ca1-623acd7c8cc7" absoluteBounds="14.64, 1.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7211f708-22f7-4014-8389-eb4051cba60d" absoluteBounds="2.875, 11.625, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/QACDataContext/PreHorario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8502ab1-0b76-425f-acfa-50ec3da59fb6" absoluteBounds="2.8900000000000006, 12.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="429045a4-7dd3-47ef-bcda-cc51552e154b" absoluteBounds="6.625, 0.625, 2, 4.2708154296875">
+      <DataClassMoniker Name="/QACDataContext/ParticipantesOyente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01a5b597-fbcc-484d-8e31-674bc8247cf2" absoluteBounds="6.6400000000000006, 1.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccf5287b-de8f-461f-a29a-897dbfe914b2" absoluteBounds="2.625, 1.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/QACDataContext/Horario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55c373bf-7253-44ef-8682-1100342612bf" absoluteBounds="2.6400000000000006, 2.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97cfcb1d-1488-444d-a4f4-4beae2832511" absoluteBounds="3.125, 3, 2, 2.5401025390625">
+      <DataClassMoniker Name="/QACDataContext/ProvinciaQAC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d880786-e80f-492e-94ca-935685a3ce98" absoluteBounds="3.1399999999999997, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="823b90ea-fad6-4c6f-88bb-099b89e92b9e" absoluteBounds="0.5, 2.375, 2, 16.962709960937502">
+      <DataClassMoniker Name="/QACDataContext/Nucleo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4796afcc-90e4-4786-a5de-7102dc5e9f23" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 16.4027099609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 19.3377099609375); (1.5 : 19.3533349609375); (2.609375 : 19.3533349609375); (2.609375 : 0.984375); (6.6015625 : 0.984375); (6.6015625 : 1.7499995); (6.625 : 1.7499995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QACDataContext/Nucleo/Nucleo_ParticipantesOyente" />
+      <nodes>
+        <classShapeMoniker Id="823b90ea-fad6-4c6f-88bb-099b89e92b9e" />
+        <classShapeMoniker Id="429045a4-7dd3-47ef-bcda-cc51552e154b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.33255126953125); (2.625 : 3.33255126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QACDataContext/Nucleo/Nucleo_Horario" />
+      <nodes>
+        <classShapeMoniker Id="823b90ea-fad6-4c6f-88bb-099b89e92b9e" />
+        <classShapeMoniker Id="ccf5287b-de8f-461f-a29a-897dbfe914b2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="24a61dd0-d5b9-4d57-b3ee-961c6dba43d1" absoluteBounds="4, 8.75, 2, 8.8860498046875">
+      <DataClassMoniker Name="/QACDataContext/vw_nucleos_participante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91888277-1f2a-435f-82b8-7313bfec3b19" absoluteBounds="4.015, 9.21, 1.9700000000000002, 8.3260498046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02d5b86e-5281-4f03-859f-28c5a24833bf" absoluteBounds="7.75, 4.5, 2, 9.8475569661458326">
+      <DataClassMoniker Name="/QACDataContext/QACParticipante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3fb628e-e696-4e14-b149-a31b016c2d9d" absoluteBounds="7.7650000000000006, 4.96, 1.9700000000000002, 9.2875569661458321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.3125 : 4.5); (9.3125 : 0.96875); (8.625 : 0.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QACDataContext/QACParticipante/QACParticipante_ParticipantesOyente" />
+      <nodes>
+        <classShapeMoniker Id="02d5b86e-5281-4f03-859f-28c5a24833bf" />
+        <classShapeMoniker Id="429045a4-7dd3-47ef-bcda-cc51552e154b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 8.64496988932292); (2.52604166666667 : 8.64496988932292 : JumpStart); (2.69270833333333 : 8.64496988932292 : JumpEnd); (7.75 : 8.64496988932292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QACDataContext/Nucleo/Nucleo_QACParticipante" />
+      <nodes>
+        <classShapeMoniker Id="823b90ea-fad6-4c6f-88bb-099b89e92b9e" />
+        <classShapeMoniker Id="02d5b86e-5281-4f03-859f-28c5a24833bf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b456b0e7-df84-4296-a810-5d3ca15e4010" absoluteBounds="9.5, 2.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QACDataContext/Nacionalidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40a0502a-7a2b-4925-b176-de9e25b35b99" absoluteBounds="9.515, 3.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6a93692-9d8a-4308-ae71-7bf23efdd457" absoluteBounds="7.125, 1.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/QACDataContext/OrganizacionPriorizada" />
+      <nestedChildShapes>
+        <elementListCompartment Id="226b2413-80fb-4389-8d1a-65b12a24b04e" absoluteBounds="7.14, 1.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f25fd75-754a-4e09-be04-747a1a0d143b" absoluteBounds="10.25, 0.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/QACDataContext/Organizacione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8d5c026-5320-45cc-ae0f-e429d9d9634d" absoluteBounds="10.265, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.25 : 1.3124995); (12.37288 : 1.3124995); (12.37288 : 0.50212); (11.4583333333333 : 0.502119999999999 : JumpStart); (11.1666666666667 : 0.50212 : JumpEnd); (0.37712 : 0.50212); (0.37712 : 19.5855899609375); (2.031252 : 19.5855899609375); (2.031252 : 19.3377099609375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QACDataContext/Organizacione/Organizacione_Nucleo" />
+      <nodes>
+        <classShapeMoniker Id="1f25fd75-754a-4e09-be04-747a1a0d143b" />
+        <classShapeMoniker Id="823b90ea-fad6-4c6f-88bb-099b89e92b9e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4c765352-1875-4879-ba84-b56c943046d4" absoluteBounds="10.375, 2, 2, 16.962709960937502">
+      <DataClassMoniker Name="/QACDataContext/PreNucleo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8aef4762-fcba-49da-91e0-6255f4b921de" absoluteBounds="10.39, 2.46, 1.9700000000000002, 16.4027099609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.375 : 18.2984948730469); (3.40625 : 18.2984948730469); (3.40625 : 14.1651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QACDataContext/PreNucleo/PreNucleo_PreHorario" />
+      <nodes>
+        <classShapeMoniker Id="4c765352-1875-4879-ba84-b56c943046d4" />
+        <classShapeMoniker Id="7211f708-22f7-4014-8389-eb4051cba60d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 0.625); (11.25 : 0.125); (11.375 : 0.125); (11.375 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QACDataContext/Organizacione/Organizacione_PreNucleo" />
+      <nodes>
+        <classShapeMoniker Id="1f25fd75-754a-4e09-be04-747a1a0d143b" />
+        <classShapeMoniker Id="4c765352-1875-4879-ba84-b56c943046d4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="afc8ecea-ab37-4213-a532-b2d60cc2a379" absoluteBounds="2.75, 1, 2.625, 7.5399397786458326">
+      <DataClassMoniker Name="/QACDataContext/vw_prenucleos_organizacione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be518800-7b1f-4021-8b39-f35e675bd409" absoluteBounds="2.7649999999999997, 1.46, 2.5949999999999998, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6197bee8-3d68-425c-8dca-6567e26029c8" absoluteBounds="11, 11.5, 2, 12.539777018229165">
+      <DataClassMoniker Name="/QACDataContext/PreParticipante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b16a7174-316e-4b97-a5fe-bf3b32f092ad" absoluteBounds="11.015, 11.96, 1.9700000000000002, 11.979777018229166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.375 : 18.9627099609375); (11.375 : 24.2897770182292); (12 : 24.2897770182292); (12 : 24.0397770182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QACDataContext/PreNucleo/PreNucleo_PreParticipante" />
+      <nodes>
+        <classShapeMoniker Id="4c765352-1875-4879-ba84-b56c943046d4" />
+        <classShapeMoniker Id="6197bee8-3d68-425c-8dca-6567e26029c8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dfe12543-5caa-4995-95c4-47be067dda73" absoluteBounds="0.5, 1, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/QACDataContext/vw_alfabetizador_organizacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16d7a346-f2ef-4b76-97d0-308054d98a0c" absoluteBounds="0.51500000000000012, 1.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2a1cda2-bc6a-4d93-8399-b8ef5796b344" absoluteBounds="6.375, 2.875, 2, 4.8477197265625">
+      <DataClassMoniker Name="/QACDataContext/NucleosAudit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33bad701-3ea6-4f22-87d2-d184ab654777" absoluteBounds="6.39, 3.335, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

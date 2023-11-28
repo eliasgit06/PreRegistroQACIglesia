@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GEODB" Class="GEODBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=h7dxy4lo9g.database.windows.net;Initial Catalog=GEODB;Persist Security Info=True;User ID=qacusuario" SettingsObjectName="QACIglesia.Model.Properties.Settings" SettingsPropertyName="GEODBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Provincia" Member="Provincias">
+    <Type Name="Provincia">
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="enlace" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Association Name="Provincia_Municipio" Member="Municipios" ThisKey="ProvinciaId" OtherKey="ProvinciaId" Type="Municipio" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Municipio" Member="Municipios">
+    <Type Name="Municipio">
+      <Column Name="MunicipioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre2" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Association Name="Municipio_DistritoMunicipal" Member="DistritoMunicipals" ThisKey="ProvinciaId,MunicipioId" OtherKey="ProvinciaId,MunicipioId" Type="DistritoMunicipal" />
+      <Association Name="Provincia_Municipio" Member="Provincia" ThisKey="ProvinciaId" OtherKey="ProvinciaId" Type="Provincia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DistritoMunicipal" Member="DistritoMunicipals">
+    <Type Name="DistritoMunicipal">
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MunicipioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="DistritoMunicipal_Seccion" Member="Seccions" ThisKey="DistritoMunicipalId,ProvinciaId,MunicipioId" OtherKey="DistritoMunicipalId,ProvinciaId,MunicipioId" Type="Seccion" />
+      <Association Name="Municipio_DistritoMunicipal" Member="Municipio" ThisKey="ProvinciaId,MunicipioId" OtherKey="ProvinciaId,MunicipioId" Type="Municipio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Seccion" Member="Seccions">
+    <Type Name="Seccion">
+      <Column Name="SeccionId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MunicipioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Seccion_Barrio" Member="Barrios" ThisKey="SeccionId,ProvinciaId,MunicipioId,DistritoMunicipalId" OtherKey="SeccionId,ProvinciaId,MunicipioId,DistritoMunicipalId" Type="Barrio" />
+      <Association Name="DistritoMunicipal_Seccion" Member="DistritoMunicipal" ThisKey="DistritoMunicipalId,ProvinciaId,MunicipioId" OtherKey="DistritoMunicipalId,ProvinciaId,MunicipioId" Type="DistritoMunicipal" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Barrio" Member="Barrios">
+    <Type Name="Barrio">
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MunicipioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeccionId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BarrioId" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="circ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="longitud" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="latitud" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Barrio_SubBarrio" Member="SubBarrios" ThisKey="BarrioId,ProvinciaId,MunicipioId,DistritoMunicipalId,SeccionId" OtherKey="BarrioId,ProvinciaId,MunicipioId,DistritoMunicipalId,SeccionId" Type="SubBarrio" />
+      <Association Name="Seccion_Barrio" Member="Seccion" ThisKey="SeccionId,ProvinciaId,MunicipioId,DistritoMunicipalId" OtherKey="SeccionId,ProvinciaId,MunicipioId,DistritoMunicipalId" Type="Seccion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubBarrio" Member="SubBarrios">
+    <Type Name="SubBarrio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProvinciaId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MunicipioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DistritoMunicipalId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeccionId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BarrioId" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubBarrioId" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Barrio_SubBarrio" Member="Barrio" ThisKey="BarrioId,ProvinciaId,MunicipioId,DistritoMunicipalId,SeccionId" OtherKey="BarrioId,ProvinciaId,MunicipioId,DistritoMunicipalId,SeccionId" Type="Barrio" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
