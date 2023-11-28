@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://infotep.gob.do/CWS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://infotep.gob.do/CWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://infotep.gob.do/CWS">
+      <s:element name="CertificadosParticipanteDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificadosParticipanteDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CertificadosParticipanteDocumentoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificadosParticipanteNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificadosParticipanteNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CertificadosParticipanteNombreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CertificadosParticipanteDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:CertificadosParticipanteDocumento" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:CertificadosParticipanteDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:CertificadosParticipanteNombre" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:CertificadosParticipanteNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteDocumentoHttpGetIn">
+    <wsdl:part name="NombreUsuario" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+    <wsdl:part name="NoDocumento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteDocumentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreHttpGetIn">
+    <wsdl:part name="NombreUsuario" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteDocumentoHttpPostIn">
+    <wsdl:part name="NombreUsuario" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+    <wsdl:part name="NoDocumento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteDocumentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreHttpPostIn">
+    <wsdl:part name="NombreUsuario" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CertificadosParticipanteNombreHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="CertificadosWSSoap">
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <wsdl:input message="tns:CertificadosParticipanteDocumentoSoapIn" />
+      <wsdl:output message="tns:CertificadosParticipanteDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <wsdl:input message="tns:CertificadosParticipanteNombreSoapIn" />
+      <wsdl:output message="tns:CertificadosParticipanteNombreSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CertificadosWSHttpGet">
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <wsdl:input message="tns:CertificadosParticipanteDocumentoHttpGetIn" />
+      <wsdl:output message="tns:CertificadosParticipanteDocumentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <wsdl:input message="tns:CertificadosParticipanteNombreHttpGetIn" />
+      <wsdl:output message="tns:CertificadosParticipanteNombreHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CertificadosWSHttpPost">
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <wsdl:input message="tns:CertificadosParticipanteDocumentoHttpPostIn" />
+      <wsdl:output message="tns:CertificadosParticipanteDocumentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <wsdl:input message="tns:CertificadosParticipanteNombreHttpPostIn" />
+      <wsdl:output message="tns:CertificadosParticipanteNombreHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CertificadosWSSoap" type="tns:CertificadosWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <soap:operation soapAction="http://infotep.gob.do/CWS/CertificadosParticipanteDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <soap:operation soapAction="http://infotep.gob.do/CWS/CertificadosParticipanteNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CertificadosWSSoap12" type="tns:CertificadosWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <soap12:operation soapAction="http://infotep.gob.do/CWS/CertificadosParticipanteDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <soap12:operation soapAction="http://infotep.gob.do/CWS/CertificadosParticipanteNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CertificadosWSHttpGet" type="tns:CertificadosWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <http:operation location="/CertificadosParticipanteDocumento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <http:operation location="/CertificadosParticipanteNombre" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CertificadosWSHttpPost" type="tns:CertificadosWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CertificadosParticipanteDocumento">
+      <http:operation location="/CertificadosParticipanteDocumento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadosParticipanteNombre">
+      <http:operation location="/CertificadosParticipanteNombre" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CertificadosWS">
+    <wsdl:port name="CertificadosWSSoap" binding="tns:CertificadosWSSoap">
+      <soap:address location="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CertificadosWSSoap12" binding="tns:CertificadosWSSoap12">
+      <soap12:address location="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CertificadosWSHttpGet" binding="tns:CertificadosWSHttpGet">
+      <http:address location="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CertificadosWSHttpPost" binding="tns:CertificadosWSHttpPost">
+      <http:address location="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

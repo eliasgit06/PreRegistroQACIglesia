@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://cos.infotep.gov.do:9999/CertificadosWS.asmx?wsdl" docRef="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" xmlns:q1="http://infotep.gob.do/CWS" binding="q1:CertificadosWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://cos.infotep.gov.do:9999/CertificadosWS.asmx" xmlns:q2="http://infotep.gob.do/CWS" binding="q2:CertificadosWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
